@@ -40,7 +40,7 @@ namespace GradeBook.UserInterfaces
                 return;
             }
             var name = parts[1];
-            var type = parts[2];
+            var type = parts[2].ToLower();
             BaseGradeBook gradeBook;
             if (type == "standard")
             {
@@ -52,7 +52,7 @@ namespace GradeBook.UserInterfaces
             }
             else
             {
-                Console.WriteLine(" is not a supported type of gradebook, please try again");
+                Console.WriteLine("{0} is not a supported type of gradebook, please try again.", type);
                 return;
             }
 
